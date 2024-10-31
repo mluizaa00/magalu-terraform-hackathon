@@ -1,16 +1,9 @@
-terraform {
-  required_providers {
-    mgc = {
-      source = "magalucloud/mgc"
-    }
-  }
-}
-
 resource "secomp_hackathon_atesete_cluster" "cluster" {
   name                 = "ecommerce-service"
   version              = "v0.0.1"
   enabled_server_group = false
   description          = "ecommerce service application"
+  provider = secomp
 }
 
 resource "secomp_hackathon_atesete_nodepool" "gp1_small" {
