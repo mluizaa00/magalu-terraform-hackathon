@@ -1,11 +1,16 @@
+locals {
+  region = var.region
+  api-key = var.api-key
+}
+
 provider "mgc" {
   alias = "sudeste"
-  region = "br-se1"
-  api_key = "d6970010-59c9-4468-8d20-aa30bfcf42f8"
+  region = local.region
+  api_key = local.api-key
   object_storage = {
     key_pair = { 
-      key_id = "d6970010-59c9-4468-8d20-aa30bfcf42f8"
-      key_secret = "d6970010-59c9-4468-8d20-aa30bfcf42f8"
+      key_id = local.api-key
+      key_secret = local.api-key
     }
   }
 }
