@@ -1,7 +1,8 @@
 terraform {
   required_providers {
-    secomp = {
-      source = "magalucloud/secomp"
+    mgc = {
+      source = "magalucloud/mgc"
+      version = "0.27.1"
     }
   }
 }
