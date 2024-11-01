@@ -23,7 +23,7 @@ resource "kubernetes_cluster_role_binding" "terraform_binding" {
 
 data "kubernetes_secret" "terraform_token" {
   metadata {
-    name      = kubernetes_service_account.terraform.default_secret_name
+    name      = kubernetes_service_account.terraform.metadata[0].name
     namespace = kubernetes_service_account.terraform.metadata[0].namespace
   }
 }
