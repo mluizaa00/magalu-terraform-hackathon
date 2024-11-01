@@ -1,3 +1,3 @@
-resource "mgc_network_vpc" "my_vpc" {
+resource "mgc_network_vpc" "vpc" {
     name = "AT7vpc(2)"   
 }
