@@ -10,3 +10,12 @@ terraform {
     }
   }
 }
+
+module "cloud" {
+  source = "./cloud"
+
+  kubeconfig_path = var.kubeconfig_path
+  api-key = var.api-key
+  name = var.name
+  region = var.region
+}
