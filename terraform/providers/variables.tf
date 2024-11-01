@@ -1,0 +1,30 @@
+variable "region" {
+  type        = string
+  default     = "br-se1"
+  description = "Região"
+}
+
+# This should be a secret/vault
+variable "api-key" {
+  type        = string
+  default     = "b932ce86-c4b7-426a-b73c-3dba5ef28c8f"
+  description = "API Key Credential"
+}
+
+variable "name" {
+  type        = string
+  default     = "at7"
+  description = "Default resource name"
+}
+
+variable "kubernates-host" {
+  type        = string
+  default     = "https://169.150.1.0:6443"
+  description = "Default k8s host"
+}
+
+variable "kubernates-client-certificate" {
+  type        = string
+  default     = "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUM2akNDQWRLZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJME1URXdNVEF3TlRJd09Wb1hEVE0wTVRBek1EQXdOVGN3T1Zvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTFdPCnYzL2hONXRNWnVLeGhJUndPRTNnWnMvamNmU29xcFpac2xBN2hYQlVIcThldU9HK2QxdE5YOTNBL1RGWm11NEEKTXFNdkhVNSs0OWdIVlhFREo5dmR0cVI5REZBQ1RXbWlRaWNWVGczcGdEMkZ4NXdXRHM5NTZVQjQ4ODNlNU9FcApHOUJVRGFvb1poV3ZwRUdyZUkvTmxLVEZHL216Q2MxVXBJaHFTOWxOYUF4OW9ha0t4ZjBuczdrM2grd1lSZWYxClJ3NUpiVlVVT1JnY1J4VHgrZytUL3NNNEFicUx1WVZoZ3dTNUxWaGhhM2tDdmYxeTJTenJkSDR6QStOU2d3V1EKMldVNHBHcFltMzkxdnVkdEFLbjEvbEhYeXVpcEIxYlpGUmMyTnlKN05jUXh2TnJkSTJSV0FGcHpOaW1VazFCdApWeWpFbjVkSVNGdXFKTmJzR05VQ0F3RUFBYU5GTUVNd0RnWURWUjBQQVFIL0JBUURBZ0trTUJJR0ExVWRFd0VCCi93UUlNQVlCQWY4Q0FRQXdIUVlEVlIwT0JCWUVGQjYwS1B0bGd4cEFpMDNTSmhJMG5mVE1QZ21RTUEwR0NTcUcKU0liM0RRRUJDd1VBQTRJQkFRQnhNTkdsbUhqdjVWTjJaSytXeGdtOEI4N1hSVys2VU4vZW9pZ2s0NnFiNWFwaQo4RmFITFVMUXBUQ21ia013RExGWjZEVnFQQ3BoaTRDaUxjcFpOODdpQUlBaWI2OUtMNXY4SFF4WlRIeE5oeWs4CmQ5cGVQRU1Yd2lydnd3L01nbW1HNG5ZVG4xOUQvQm5KaDViVnY3TllHd2lVWWRwcTNwYnZzZDVXcVNHL0pZcjEKQlRiZTF0VUdBRkpadDlzUTRyYlBEbTU3TlF0bUhyWnNqZXYwOXh2TnBKcTVDZEV4M2dFdlVVUjhCd1orUmxWMwpwZm5ObU9tL1BXZFRqby9wcUwwa05ibnNMMHhBcTdUUzlBeW95NitNTUY5Q1cyU3lremJMbjhnbk9qY3BzaUJWCkgramE5eFMzclZXVFVMQk9USzVySlBBMnlMV25NUTI3STBOUjFVOVUKLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo="
+  description = "Default certificate-authority-data on kubeconfig"
+}
