@@ -9,3 +9,15 @@ variable "mongo_password_property" {
   default     = "MONGO_PASSWORD"
   description = "Mongo password property on environment variables"
 }
+
+variable "mongo_secret_name" {
+  type        = string
+  default     = "admin"
+  description = "Default mongodb credentials secret name"
+}
+
+variable "namespace" {
+  type        = string
+  default     = "plataforma"
+  description = "Default namespace"
+}

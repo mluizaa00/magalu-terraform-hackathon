@@ -1,7 +1,14 @@
+locals {
+  mongo_user_property = var.mongo_user_property
+  mongo_password_property = var.mongo_password_property
+  mongo_secret_name = var.mongo_secret_name
+  namespace = var.namespace
+}
+
 resource "kubernetes_deployment" "mongodb" {
   metadata {
     name      = "mongodb"
-    namespace = "default"
+    namespace = local.namespace
     labels = {
       app = "mongodb"
     }
@@ -33,8 +40,8 @@ resource "kubernetes_deployment" "mongodb" {
             name = "MONGO_INITDB_ROOT_USERNAME"
             value_from {
               secret_key_ref {
-                name = kubernetes_secret.mongodb_secret.metadata[0].name
-                key  = "MONGO_USERNAME"
+                name = local.mongo_secret_name
+                key  = local.mongo_user_property
               }
             }
           }
@@ -43,8 +50,8 @@ resource "kubernetes_deployment" "mongodb" {
             name = "MONGO_INITDB_ROOT_PASSWORD"
             value_from {
               secret_key_ref {
-                name = kubernetes_secret.mongodb_secret.metadata[0].name
-                key  = "MONGO_PASSWORD"
+                name = local.mongo_secret_name
+                key  = local.mongo_password_property
               }
             }
           }

@@ -1,7 +1,14 @@
+locals {
+  mongo_user_property = var.mongo_user_property
+  mongo_password_property = var.mongo_password_property
+  mongo_secret_name = var.mongo_secret_name
+  namespace = var.namespace
+}
+
 resource "kubernetes_deployment" "notes_management" {
   metadata {
     name      = "notes-management"
-    namespace = kubernetes_namespace.plataforma.metadata[0].name
+    namespace = local.namespace
   }
 
   spec {
@@ -31,7 +38,7 @@ resource "kubernetes_deployment" "notes_management" {
       spec {
         container {
           name  = "notes-management"
-          image = "<your-image-path>"
+          image = "my image"
 
           image_pull_policy = "IfNotPresent"
 
@@ -41,21 +48,21 @@ resource "kubernetes_deployment" "notes_management" {
           }
 
           env {
-            name = "MONGO_USERNAME"
+            name = local.mongo_user_property
             value_from {
               secret_key_ref {
-                name = kubernetes_secret.mongodb_secret.metadata[0].name
-                key  = "MONGO_USERNAME"
+                name = local.mongo_secret_name
+                key  = local.mongo_user_property
               }
             }
           }
 
           env {
-            name = "MONGO_PASSWORD"
+            name = local.mongo_password_property
             value_from {
               secret_key_ref {
-                name = kubernetes_secret.mongodb_secret.metadata[0].name
-                key  = "MONGO_PASSWORD"
+                name = local.mongo_secret_name
+                key  = local.mongo_password_property
               }
             }
           }

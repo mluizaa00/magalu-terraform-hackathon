@@ -1,7 +1,7 @@
 resource "kubernetes_secret" "mongodb_secret" {
   metadata {
     name      = "mongodb-credentials"
-    namespace = "default"
+    namespace = "default" 
   }
   data = {
     MONGO_USERNAME = base64encode("admin") 

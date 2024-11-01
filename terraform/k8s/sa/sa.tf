@@ -1,7 +1,7 @@
 resource "kubernetes_service_account" "terraform" {
   metadata {
     name      = "terraform"
-    namespace = "default"
+    namespace = "plataforma"
   }
 }
 
