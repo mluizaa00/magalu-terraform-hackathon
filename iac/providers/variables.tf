@@ -7,7 +7,7 @@ variable "region" {
 # This should be a secret/vault
 variable "api-key" {
   type        = string
-  default     = "apikeyfromvaultmaybe?"
+  default     = "b932ce86-c4b7-426a-b73c-3dba5ef28c8f"
   description = "API Key Credential"
 }
 
