@@ -14,11 +14,3 @@ terraform {
     }
   }
 }
-
-module "deployments-plataforma" {
-  source = "./deployments/plataforma"
-}
-
-module "sa" {
-  source = "./sa"
-}

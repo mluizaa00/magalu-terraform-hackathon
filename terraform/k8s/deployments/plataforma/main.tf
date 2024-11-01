@@ -15,10 +15,10 @@ terraform {
   }
 }
 
-module "deployments-plataforma" {
-  source = "./deployments/plataforma"
+module "mongodb" {
+  source = "./mongodb"
 }
 
-module "sa" {
-  source = "./sa"
+module "notes-management" {
+  source = "./notes-management"
 }
