@@ -19,3 +19,7 @@ module "providers" {
   source = "./providers"
   kubeconfig_path = module.k8s.kubeconfig_path
 }
+
+module "vpc" {
+  source = "./vpc"
+}
