@@ -38,7 +38,7 @@ resource "kubernetes_deployment" "notes_management" {
       spec {
         container {
           name  = "statistic-management"
-          image = "dockerhub"
+          image = "luizaprestesufscar/secomp-2024:latest"
 
           image_pull_policy = "IfNotPresent"
 
