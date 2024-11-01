@@ -1,7 +1,7 @@
-### Introdução
+## Introdução
 
-Seja bem-vindo ao repositório do Hackathon Magalu Cloud da SECOMP 2024. Somos os integrantes
-do grupo atesete (at7).
+Seja bem-vindo ao repositório do **Hackathon Magalu Cloud da SECOMP 2024**. Somos os integrantes
+do grupo **atesete (at7)**.
 
 As referências do nosso projeto são as seguintes:
 
