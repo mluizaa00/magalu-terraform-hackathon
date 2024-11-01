@@ -26,8 +26,8 @@ module "mongodb" {
   namespace = kubernetes_namespace.plataforma.metadata[0].name
 }
 
-module "notes-management" {
-  source = "./notes-management"
+module "statistic-management" {
+  source = "./statistic-management"
 
   mongo_user_property = var.mongo_user_property
   mongo_password_property = var.mongo_password_property
